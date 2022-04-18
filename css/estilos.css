@@ -93,6 +93,11 @@ html{
     float: center;
 }
 
+.proyecto__imagenCarrito{
+    height: 200px;
+    float: center;
+}
+
 .proyecto__titulo{
     color: #29597C;
     font-size: 1.125em;
