@@ -1,0 +1,6 @@
+1. LLenar los logs de errores de los ultimos 3 proyecto JS
+2. Llenar Toogle  - pendiente
+3. Ver videos y documentacion de POO  - listo 
+4. Contestar las preguntas de POO - listo 
+5. Subir el archivo a classroom de POO - listo
+6. Seguir adelantando proyecto JS 
