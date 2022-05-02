@@ -44,6 +44,7 @@ html{
     float: right;
     margin: 0.5em;
     width: 80%;
+
    }
 
 
@@ -79,24 +80,21 @@ html{
 /* Proyectos */
 .proyectos{
     padding: 1em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0,40em));
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(0,35em));
     justify-content: center;
 }
 
+    
 .proyecto{
     padding: 1em;
 }
 
 .proyecto__imagen{
-    width: 70%;
+    width: 100%;
     float: center;
 }
 
-.proyecto__imagenCarrito{
-    height: 200px;
-    float: center;
-}
 
 .proyecto__titulo{
     color: #29597C;
@@ -106,3 +104,5 @@ html{
 .proyecto__descripcion{
     color: #797D7F;
 }
+
+

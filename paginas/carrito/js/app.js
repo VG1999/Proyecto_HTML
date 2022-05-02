@@ -20,9 +20,18 @@ function cargarEvenListeners(){
 
     listaCursos.addEventListener('click', agregarCurso);
 
-    //Eliminr cursos del carrito
-
+    //Eliminar cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
+
+
+     //Muestra los cursos de Local Storage
+     document.addEventListener('DOMContentLoaded',() =>{
+
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
+     })
+
 
     vaciarCarritoBtn.addEventListener('click', () => {
 
@@ -104,8 +113,14 @@ function leerDatosCurso(curso){
 
 
         if (curso.id === infoCurso.id){
+    
+            const evaluar = confirm('Este curso ya ha sido agregado al carrito. ¿Deseas agregarlo nuevamente?');
+                if (evaluar) {
+                    curso.cantidad++;
 
-        curso.cantidad++;
+                    //Se le notifica la usurio del curso agregado
+                    alert("Agregado correctamente");
+                }
 
         return curso;
 
@@ -121,6 +136,9 @@ function leerDatosCurso(curso){
      // Agregar Elementos al carrito
 
     articulosCarrito = [...articulosCarrito, infoCurso]
+
+     //Se le notifica la usurio del curso agregado
+     alert("Agregado correctamente");
 
     }
 
@@ -162,7 +180,15 @@ function carritoHTML(){
        // Agregar el HTML del carrito en el tbody
        contenedorCarrito.appendChild(row);
 
+       //Agregar el carrito de compras al storage
+       sincronizarStorage();
+
     } );
+}
+
+function sincronizarStorage(){
+
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 
